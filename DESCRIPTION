@@ -1,0 +1,11 @@
+Package: gulf.metadata
+Type: Package
+Title: Southern Gulf of St Lawrence Metadata
+Version: 0.1.0
+Imports: gulf.utils
+Authors@R: as.person(c("Tobie Surette <Tobie.Surette@dfo-mpo.gc.ca> [aut, cre]"))
+Description: Functions for assigning metadata to data objects.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
