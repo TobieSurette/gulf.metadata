@@ -13,3 +13,4 @@ Function      | Description
 `description` | Set or retrieve a text description(s) for a data table or variable field.
 `format`      | Set or retrieve the format defintion of a variable field.
 `units`       | Set or retrieve the units of a variable field.
+`project`     | Set or retrieve a project tag for a data table.  
