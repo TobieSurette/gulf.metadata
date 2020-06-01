@@ -2,7 +2,7 @@
 `gulf.metadata` is an **R** package for treating Southern Gulf of St. Lawrence metadata. Metadata is data that provides information about other data. This includes such items as data provenance, measurement units, index keys, study and field descriptions, data and file formats and keywords. Metadata can be attached to or retrieved from objects using the set of functions in the table below. Note that some metadata are automatically linked with datasets when they are loaded.
 
 Function      | Description
-------------- | ------------------------------------------------------------------------
+------------- | --------------------------------------------------------------------------
 `metadata`    | Retrieve and collate metadata associated with an object.
 `key`         | Set or retrieve an index key for a data table.
 `keyword`     | Set or retrieve an keyword(s) for a data table.
@@ -34,4 +34,16 @@ project(x) <- "survey"
 # Retrieve metadata:
 metadata(x)
 ```
+## Gulf Data Projects
+
+The package comes with a number of predefined data projects. Shown below is a portion of the project data table, the full version of which can be accessed using `project()`:
+
+   name       | name.long
+------------- | --------------------------------------------------------------------------
+`scs`         | Snow crab survey
+`sco`         | Snow crab Observer Program
+`rvs`         | September multispecies survey
+`nss`         | Northumberland Strait survey
+`scfec`       | snow crab fecundity
+`alsi`        | Atlantic Lobster Settlement Index program
 
