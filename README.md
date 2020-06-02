@@ -1,5 +1,5 @@
 # `gulf.metadata` **R** Package
-`gulf.metadata` is an **R** package for treating Southern Gulf of St. Lawrence metadata. Metadata is data that provides information about other data. This includes such items as data provenance, measurement units, index keys, study and field descriptions, data and file formats and keywords. Metadata can be attached to or retrieved from objects using the set of functions in the table below. Note that some metadata are automatically linked with datasets when they are loaded.
+`gulf.metadata` is an **R** package for treating Southern Gulf of St. Lawrence metadata. Metadata is data which provides information about other data, such data provenance, measurement units, index keys, study and field descriptions, data and file formats and keywords. Metadata can be attached to or retrieved from objects using the set of functions in the table below. Note that some metadata are automatically linked with datasets when they are loaded.
 
 Function      | Description
 ------------- | --------------------------------------------------------------------------
