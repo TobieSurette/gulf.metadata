@@ -25,9 +25,10 @@
 #' # Retrieve metadata:
 #' metadata(x)
 #'
-#' @seealso \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}, \code{\link{keyword}}
+#' @seealso \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 #'
 #' @export metadata
+#' @rawNamespace S3method(metadata, data.frame)
 #' @export metadata.data.frame
 #'
 metadata <- function(x, ...) UseMethod("metadata")

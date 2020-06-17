@@ -30,11 +30,11 @@
 #' units(x) <- NULL
 #'
 #' @export "units<-"
-#' @export "units<-.default"
+#' @rawNamespace S3method("units<-", default)
 #' @export "units"
-#' @export "units.default"
+#' @rawNamespace S3method(units, default)
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{format}}, \code{\link{keyword}}
+#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 
 #' @rdname units
 units <- function(x, ...) UseMethod("units")

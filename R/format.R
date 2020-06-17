@@ -37,9 +37,9 @@
 #' # Erase 'format' attribute:
 #' format(x) <- NULL
 #'
-#' @export format.default
+#' @rawNamespace S3method(format, default)
 #' @export "format<-"
-#' @export "format<-.default"
+#' @rawNamespace S3method("format<-",default)
 #' 
 #' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link{keyword}}
 

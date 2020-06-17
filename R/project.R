@@ -43,12 +43,12 @@
 #' project("rv", verbose = TRUE) # Long form.
 #' 
 #' @export "project<-"
-#' @export "project<-.default"
+#' @rawNamespace S3method("project<-",default)
 #' @export project
-#' @export project.default
-#' @export project.character
+#' @rawNamespace S3method(project,default)
+#' @rawNamespace S3method(project,character)
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}
+#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
 #'
 
 #' @rdname project

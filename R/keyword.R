@@ -22,11 +22,11 @@
 #' keyword(x) # Retrieve key.
 #' 
 #' @export keyword
-#' @export keyword.default
+#' @rawNamespace S3method(keyword, default)
 #' @export "keyword<-"
-#' @export "keyword<-.default"
+#' @rawNamespace S3method("keyword<-", default)
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}
+#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
 #'
 
 #' @rdname keyword

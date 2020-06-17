@@ -21,8 +21,8 @@
 #' header.minilog(
 #' 
 #' @export header
-#' @export header.default
-#' @export header.minilog
+#' @rawNamespace S3method(header,default)
+#' @rawNamespace S3method(header,minilog)
 #' 
 #' @seealso \code{\link[gulf.data]{minilog}}
 #' 

@@ -29,13 +29,13 @@
 #' is.key(x)  # No need to specify 'year' since it is already defined.
 #' 
 #' @export key
-#' @export key.default
+#' @rawNamespace S3method(key,default)
 #' @export "key<-"
-#' @export "key<-.default"
+#' @rawNamespace S3method("key<-",default)
 #' @export is.key
-#' @export is.key.data.frame
-#'
-#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}, \code{\link{keyword}}
+#' @rawNamespace S3method(is.key,data.frame)
+#' 
+#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 #'
 
 #' @rdname key

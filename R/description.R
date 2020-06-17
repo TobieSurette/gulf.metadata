@@ -41,11 +41,11 @@
 #' description(x) <- NULL          # Remove all descriptions.
 #'
 #' @export description
-#' @export description.default
+#' @rawNamespace S3method(description, default)
 #' @export "description<-"
-#' @export "description<-.default"
+#' @rawNamespace S3method("description<-", default)
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{units}}, \code{\link{format}}, \code{\link{keyword}}
+#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 #'
 
 #' @rdname description 
