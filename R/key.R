@@ -28,26 +28,19 @@
 #' is.key(x, "year")
 #' is.key(x)  # No need to specify 'year' since it is already defined.
 #' 
-#' @export key
-#' @rawNamespace S3method(key,default)
-#' @export "key<-"
-#' @rawNamespace S3method("key<-",default)
-#' @export is.key
-#' @rawNamespace S3method(is.key,data.frame)
-#' 
 #' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 #'
 
-#' @rdname key
+#' @export
 key <- function(x, ...) UseMethod("key")
 
-#' @rdname key
+#' @export 
 key.default <- function(x, ...) return(attr(x, "key"))
 
-#' @rdname key
+#' @export
 "key<-" <- function(x, ...) UseMethod("key<-")
 
-#' @rdname key
+#' @export
 "key<-.default" <- function(x, value){
    if (!is.null(value)){
       if (!is.character(value)) stop("Key must contain variable name(s).")
@@ -60,10 +53,10 @@ key.default <- function(x, ...) return(attr(x, "key"))
    return(x)
 }
 
-#' @rdname key
+#' @export 
 is.key <- function(x, ...) UseMethod("is.key")
 
-#' @rdname key
+#' @export
 is.key.data.frame <- function(x, key, ...){
    if (missing(key)) if ("key" %in% names(attributes)) key <- attr(x, "key")
    if (missing(key)) stop("Index 'key' is unspecified.")

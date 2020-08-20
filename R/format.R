@@ -1,6 +1,6 @@
 #' Assign or Retrieve Data Format
 #'
-#' @description Functions to assigns or retrieve data format(s) to and from an object.
+#' @description Functions to assigns or retrieve data formatting information to and from an object.
 #'
 #' @param x Target object.
 #' @param y Character string(s) specifying the name(s) of the variables or attributes to be assigned data formats.
@@ -36,23 +36,16 @@
 #'
 #' # Erase 'format' attribute:
 #' format(x) <- NULL
-#'
-#' @rawNamespace S3method(format, default)
-#' @export "format<-"
-#' @rawNamespace S3method("format<-",default)
 #' 
 #' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link{keyword}}
 
-#' @rdname format 
-format.default <- function(x, ...){
-   f <- attr(x, "format")
-   if (!is.null(f)) return(f) else base::format(x, ...)
-}
+#' @export
+format.default <- function(x, ...) if (!is.null(attr(x, "format"))) return(f) else base::format(x, ...)
 
-#' @rdname format 
+#' @export 
 "format<-" <- function(x, ...) UseMethod("format<-")
 
-#' @rdname format 
+#' @export
 "format<-.default" <- function(x, y, value, ...){
    if (missing(y)){
       # Extract attributes fields from 'value':
@@ -82,4 +75,3 @@ format.default <- function(x, ...){
 
    return(x)
 }
-

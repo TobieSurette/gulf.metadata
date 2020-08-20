@@ -13,11 +13,11 @@
 #'
 #' @section Functions:
 #' \describe{
-#'   \item{\code{project<-}}{Generic \code{project} assignment method.}
-#'   \item{\code{project<-.default}}{Default \code{project} assignment method.}
 #'   \item{\code{project}}{Generic \code{project}' extraction method.}
 #'   \item{\code{project.default}}{Default \code{project} extraction method.} 
 #'   \item{\code{project.character}}{Find project name.} 
+#'   \item{\code{project<-}}{Generic \code{project} assignment method.}
+#'   \item{\code{project<-.default}}{Default \code{project} assignment method.}
 #' }
 #'
 #' @examples
@@ -41,49 +41,22 @@
 #' project("september survey") 
 #' project("Northumberland") 
 #' project("rv", verbose = TRUE) # Long form.
-#' 
-#' @export "project<-"
-#' @rawNamespace S3method("project<-",default)
-#' @export project
-#' @rawNamespace S3method(project,default)
-#' @rawNamespace S3method(project,character)
 #'
 #' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
 #'
 
-#' @rdname project
-"project<-" <- function(x, ...) UseMethod("project<-")
-
-#' @rdname project
-"project<-.default" <- function(x, value, ...){
-   v <- project()
-   if (!is.character(value) | (length(value) != 1)) stop("Project must be a single character string.")
-
-   # Look up project identifier in reference table:
-   if (any(tolower(value) == v$name)){
-      i <- which(tolower(value) == v$name)
-      keyword(x) <- deblank(strsplit(v$keywords[i], ";")[[1]])
-      description(x) <- v$description[i]
-   }
-   
-   # Assign project attribute:
-   attr(x, "project") <- value
-   
-   return(x)
-}
-
-#' @rdname project
+#' @export
 project <- function(x, ...) UseMethod("project")
 
-#' @rdname project
+#' @export
 project.default <- function(x, ...){
    if (!missing(x)) return(attr(x, "project"))
-   file <- file.locate(package = "gulf.metadata", "project.csv")
+   file <- locate(package = "gulf.metadata", "project.csv")
    v <- read.csv(file, header = TRUE, stringsAsFactors = FALSE)
    return(v)
 }
 
-#' @rdname project
+#' @export 
 project.character <- function(x, verbose = FALSE, ...){
    x <- tolower(x)
    if (!verbose) var <- "name" else var = "name.long"
@@ -104,4 +77,27 @@ project.character <- function(x, verbose = FALSE, ...){
                                   
    return(NULL)
 }
+
+#' @export
+"project<-" <- function(x, ...) UseMethod("project<-")
+
+#' @export
+"project<-.default" <- function(x, value, ...){
+   v <- project()
+   if (!is.character(value) | (length(value) != 1)) stop("Project must be a single character string.")
+
+   # Look up project identifier in reference table:
+   if (any(tolower(value) == v$name)){
+      i <- which(tolower(value) == v$name)
+      keyword(x) <- deblank(strsplit(v$keywords[i], ";")[[1]])
+      description(x) <- v$description[i]
+   }
+   
+   # Assign project attribute:
+   attr(x, "project") <- value
+   
+   return(x)
+}
+
+
 

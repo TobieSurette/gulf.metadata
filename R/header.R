@@ -3,56 +3,37 @@
 #' @description Extracts header information from certain data files.
 #' 
 #' @param x File name or object.
-#' 
-#' @section **Minilog** Header Variables:
-#' 
+#'
+#' @section Functions:
 #' \describe{
-#'   \item{Source.File}{Source fie from which the text version was generated.}
-#'   \item{Source.Device}{Device identifier.}
-#'   \item{Study.Description}{French species names.}
-#'   \item{Minilog.Initialized}{Date when device was initialized.}
-#'   \item{Study.Start.Time}{When data recording began.}
-#'   \item{Study.Stop.Time}{When data recording stopped.}
-#'   \item{Sample.Interval}{Sampling rate at which data were recorded.}
+#'   \item{\code{header}}{Default \code{header} method.}
+#'   \item{\code{header.default}}{Default \code{header} retrieval method.}
+#'   \item{\code{header<-}}{Generic \code{header} assignment method. See Examples for usage.}
+#'   \item{\code{header<-.default}}{Default\code{header} assignment method. See Examples for usage.} 
 #' }
 #'   
 #' @examples 
-#' file <- system.file(
-#' header.minilog(
-#' 
-#' @export header
-#' @rawNamespace S3method(header,default)
-#' @rawNamespace S3method(header,minilog)
 #' 
 #' @seealso \code{\link[gulf.data]{minilog}}
 #' 
+
+#' @export
 header <- function(x, ...) UseMethod("header")
 
-#' @describeIn header Retrieve \code{header} attribute.
+#' @export
 header.default <- function(x) return(attr(x, "header"))
 
-#' @describeIn header Retrieve Minilog header information.
-header.minilog <- function(x){
-   # Extract header attributes:
-   if ("minilog" %in% class(x)) return(header.default(x))
-   
-   # Read header from file:
-   if (is.character(x)){
-      if (length(x) > 1){
-         v <- NULL
-         for (i in 1:length(x)) v <- rbind(v, header.minilog(x[i]))
-         return(v)
-      }else{
-         y <- readLines(x, n = 20, encoding = "UTF-8")
-         k <- sum(substr(y, 1, 1) %in% c("*", letters, LETTERS))-1
-         y <- strsplit(y, "([:][ ])|([=])")[1:k] # Split header fields and their values.
-         header <- unlist(lapply(y, function(x) x[2]))
-         names(header) <- gsub(" ", ".", unlist(lapply(y, function(x) x[1])))
-         str <- strsplit(header["Source.File"], "\\\\")[[1]]
-         header["Source.File"] <- str[length(str)]
-         header <- as.data.frame(t(header))
-      }
-   }
-   
-   return(header)
+#' @export
+"header<-" <- function(x, ...) UseMethod("header<-")
+
+#' @export
+"header<-.default" <- function(x, value){
+   if (is.null(value) | length(value) == 0) attr(x, "header") <- NULL
+   if (!is.null(value)) attr(x, "header") <- value
+   if (!is.character(value)) stop("Keywords must be a character string(s).")
+   if (length(value) == 1) if (value == "") attr(x, "header") <- NULL
+
+   return(x)
 }
+
+

@@ -2,18 +2,9 @@
 % Please edit documentation in R/units.R
 \name{units}
 \alias{units}
-\alias{units.default}
-\alias{units<-}
-\alias{units<-.default}
 \title{Measurement Units}
 \usage{
 units(x, ...)
-
-\method{units}{default}(x, ...)
-
-units(x, ...) <- value
-
-\method{units}{default}(x, y, ...) <- value
 }
 \arguments{
 \item{x}{Target object.}
@@ -55,5 +46,5 @@ units(x) <- NULL
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{format}}, \code{\link{keyword}}
+\code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 }

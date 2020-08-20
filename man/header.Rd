@@ -2,15 +2,9 @@
 % Please edit documentation in R/header.R
 \name{header}
 \alias{header}
-\alias{header.default}
-\alias{header.minilog}
 \title{File Header Information}
 \usage{
 header(x, ...)
-
-\method{header}{default}(x)
-
-\method{header}{minilog}(x)
 }
 \arguments{
 \item{x}{File name or object.}
@@ -18,30 +12,17 @@ header(x, ...)
 \description{
 Extracts header information from certain data files.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{default}: Retrieve \code{header} attribute.
-
-\item \code{minilog}: Retrieve Minilog header information.
-}}
-
-\section{**Minilog** Header Variables}{
-
+\section{Functions}{
 
 \describe{
-  \item{Source.File}{Source fie from which the text version was generated.}
-  \item{Source.Device}{Device identifier.}
-  \item{Study.Description}{French species names.}
-  \item{Minilog.Initialized}{Date when device was initialized.}
-  \item{Study.Start.Time}{When data recording began.}
-  \item{Study.Stop.Time}{When data recording stopped.}
-  \item{Sample.Interval}{Sampling rate at which data were recorded.}
+  \item{\code{header}}{Default \code{header} method.}
+  \item{\code{header.default}}{Default \code{header} retrieval method.}
+  \item{\code{header<-}}{Generic \code{header} assignment method. See Examples for usage.}
+  \item{\code{header<-.default}}{Default\code{header} assignment method. See Examples for usage.} 
 }
 }
 
 \examples{
-file <- system.file(
-header.minilog(
 
 }
 \seealso{

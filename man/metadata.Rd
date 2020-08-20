@@ -44,5 +44,5 @@ metadata(x)
 
 }
 \seealso{
-\code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}, \code{\link{keyword}}
+\code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 }

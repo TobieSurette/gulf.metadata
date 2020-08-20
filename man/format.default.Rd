@@ -2,15 +2,9 @@
 % Please edit documentation in R/format.R
 \name{format.default}
 \alias{format.default}
-\alias{format<-}
-\alias{format<-.default}
 \title{Assign or Retrieve Data Format}
 \usage{
 \method{format}{default}(x, ...)
-
-format(x, ...) <- value
-
-\method{format}{default}(x, y, ...) <- value
 }
 \arguments{
 \item{x}{Target object.}
@@ -25,7 +19,7 @@ format(x, ...) <- value
 Object with a \code{format} attribute attached to it.
 }
 \description{
-Functions to assigns or retrieve data format(s) to and from an object.
+Functions to assigns or retrieve data formatting information to and from an object.
 }
 \details{
 Named argiments in the format that are not in the target object are ignored.
