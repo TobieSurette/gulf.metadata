@@ -19,7 +19,7 @@ units(x, ...)
 An object with a \code{units} attribute attached to it.
 }
 \description{
-Assigns or retrieves measurement units assigned to observed data.
+Assigns or retrieves measurement units assigned to a data object.
 }
 \details{
 The \code{units} attribute may be erased by assigning a \code{NULL} value to it.
@@ -46,5 +46,5 @@ units(x) <- NULL
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
+\code{\link{metadata}}
 }

@@ -59,5 +59,5 @@ project("rv", verbose = TRUE) # Long form.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
+\code{\link{metadata}}
 }

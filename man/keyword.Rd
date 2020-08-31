@@ -35,5 +35,5 @@ keyword(x) # Retrieve key.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
+\code{\link{metadata}}
 }

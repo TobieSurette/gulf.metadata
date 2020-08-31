@@ -10,7 +10,7 @@ header(x, ...)
 \item{x}{File name or object.}
 }
 \description{
-Extracts header information from certain data files.
+Function to assign and retrieve file header information associated with a data object.
 }
 \section{Functions}{
 
@@ -26,5 +26,5 @@ Extracts header information from certain data files.
 
 }
 \seealso{
-\code{\link[gulf.data]{minilog}}
+\code{\link{metadata}}
 }

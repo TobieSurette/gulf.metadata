@@ -1,6 +1,6 @@
 #' File Header Information
 #' 
-#' @description Extracts header information from certain data files.
+#' @description Function to assign and retrieve file header information associated with a data object.
 #' 
 #' @param x File name or object.
 #'
@@ -9,12 +9,12 @@
 #'   \item{\code{header}}{Default \code{header} method.}
 #'   \item{\code{header.default}}{Default \code{header} retrieval method.}
 #'   \item{\code{header<-}}{Generic \code{header} assignment method. See Examples for usage.}
-#'   \item{\code{header<-.default}}{Default\code{header} assignment method. See Examples for usage.} 
+#'   \item{\code{header<-.default}}{Default \code{header} assignment method. See Examples for usage.} 
 #' }
 #'   
 #' @examples 
 #' 
-#' @seealso \code{\link[gulf.data]{minilog}}
+#' @seealso \code{\link{metadata}}
 #' 
 
 #' @export
@@ -35,5 +35,3 @@ header.default <- function(x) return(attr(x, "header"))
 
    return(x)
 }
-
-

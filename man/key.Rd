@@ -41,5 +41,5 @@ is.key(x)  # No need to specify 'year' since it is already defined.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
+\code{\link{metadata}}
 }

@@ -2,12 +2,9 @@
 % Please edit documentation in R/metadata.R
 \name{metadata}
 \alias{metadata}
-\alias{metadata.data.frame}
 \title{Retrieve Metadata}
 \usage{
 metadata(x, ...)
-
-\method{metadata}{data.frame}(x, ...)
 }
 \arguments{
 \item{x}{Object.}
@@ -17,10 +14,18 @@ metadata(x, ...)
 \description{
 Function to retrieve metadata from an object.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{data.frame}: Extract metadata for a data frame.
-}}
+\section{Methods}{
+
+\describe{
+  \item{\code{\link{key}}}{Functions to assign, retrieve or check an index key for a given object.}
+  \item{\code{\link{description}}}{Assign or retrieve a text description to an object.}
+  \item{\code{\link{units}}}{Assigns or retrieves measurement units assigned to a data object.}
+  \item{\code{\link{fmt}}}{Functions to assigns or retrieve data formatting information to and from an object.}
+  \item{\code{\link{keyword}}}{Functions to assign, retrieve or look up object keyword attributes.}
+  \item{\code{\link{project}}}{Functions to retrieve or assign project identifiers to objects.}   
+  \item{\code{\link{header}}}{Function to assign and retrieve file header information associated with a data object.} 
+}
+}
 
 \examples{
 # Define sample data set:
@@ -42,7 +47,4 @@ keywords(x) <- c("annual", "survey")
 # Retrieve metadata:
 metadata(x)
 
-}
-\seealso{
-\code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
 }

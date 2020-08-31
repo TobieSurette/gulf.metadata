@@ -21,7 +21,7 @@
 #' keyword(x) <- c("Annual", "survey") # Assign keywords
 #' keyword(x) # Retrieve key.
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
+#' @seealso \code{\link{metadata}}
 #'
 
 #' @export
