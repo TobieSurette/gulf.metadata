@@ -31,13 +31,13 @@
 #'
 #' @seealso \code{\link{metadata}}
 
-#' @export
+#' @export units
 units <- function(x, ...) UseMethod("units")
 
 #' @export
 units.default <- function(x, ...) return(attr(x, "units"))
 
-#' @export
+#' @export "units<-"
 "units<-" <- function(x, ...) UseMethod("units<-")
 
 #' @export

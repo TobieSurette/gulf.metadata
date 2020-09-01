@@ -18,7 +18,7 @@ Function to assign and retrieve file header information associated with a data o
   \item{\code{header}}{Default \code{header} method.}
   \item{\code{header.default}}{Default \code{header} retrieval method.}
   \item{\code{header<-}}{Generic \code{header} assignment method. See Examples for usage.}
-  \item{\code{header<-.default}}{Default\code{header} assignment method. See Examples for usage.} 
+  \item{\code{header<-.default}}{Default \code{header} assignment method. See Examples for usage.} 
 }
 }
 
