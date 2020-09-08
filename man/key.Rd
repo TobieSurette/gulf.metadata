@@ -2,24 +2,9 @@
 % Please edit documentation in R/key.R
 \name{key}
 \alias{key}
-\alias{key.default}
-\alias{key<-}
-\alias{key<-.default}
-\alias{is.key}
-\alias{is.key.data.frame}
 \title{Index Key Functions}
 \usage{
 key(x, ...)
-
-\method{key}{default}(x, ...)
-
-key(x, ...) <- value
-
-\method{key}{default}(x) <- value
-
-is.key(x, ...)
-
-\method{is.key}{data.frame}(x, key, ...)
 }
 \arguments{
 \item{x}{Object.}
@@ -56,5 +41,5 @@ is.key(x)  # No need to specify 'year' since it is already defined.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
+\code{\link{metadata}}
 }

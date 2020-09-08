@@ -2,18 +2,9 @@
 % Please edit documentation in R/description.R
 \name{description}
 \alias{description}
-\alias{description.default}
-\alias{description<-}
-\alias{description<-.default}
 \title{Data Description}
 \usage{
 description(x, ...)
-
-\method{description}{default}(x, ...)
-
-description(x, ...) <- value
-
-\method{description}{default}(x, y, ...) <- value
 }
 \arguments{
 \item{x}{Target object.}
@@ -28,7 +19,7 @@ description(x, ...) <- value
 An object with a \code{description} attribute attached to it.
 }
 \description{
-Assign or retrieve a text description to an object or to other attributes.
+Assign or retrieve a text description to an object.
 }
 \details{
 The \code{description} attribute may be erased by assigning a \code{NULL} value to it.
@@ -66,5 +57,5 @@ description(x) <- NULL          # Remove all descriptions.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{key}}, \code{\link{units}}, \code{\link{format}}, \code{\link{keyword}}
+\code{\link{metadata}}
 }

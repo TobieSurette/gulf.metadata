@@ -1,6 +1,6 @@
 #' Measurement Units
 #'
-#' @description Assigns or retrieves measurement units assigned to observed data.
+#' @description Assigns or retrieves measurement units assigned to a data object.
 #'
 #' @param x Target object.
 #' @param y Character string(s) specifying the name(s) of the variables or attributes to be assigned measurement units.
@@ -29,23 +29,18 @@
 #' # Erase 'units' attribute:
 #' units(x) <- NULL
 #'
-#' @export "units<-"
-#' @rawNamespace S3method("units<-", default)
-#' @export "units"
-#' @rawNamespace S3method(units, default)
-#'
-#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{description}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
+#' @seealso \code{\link{metadata}}
 
-#' @rdname units
+#' @export units
 units <- function(x, ...) UseMethod("units")
 
-#' @rdname units
+#' @export
 units.default <- function(x, ...) return(attr(x, "units"))
 
-#' @rdname units
+#' @export "units<-"
 "units<-" <- function(x, ...) UseMethod("units<-")
 
-#' @rdname units
+#' @export
 "units<-.default" <- function(x, y, value, ...){
    if (missing(y)){
       # Extract attributes fields from 'value':

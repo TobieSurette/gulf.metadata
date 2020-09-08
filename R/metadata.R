@@ -25,15 +25,21 @@
 #' # Retrieve metadata:
 #' metadata(x)
 #'
-#' @seealso \code{\link{key}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
+#' @section Methods:
+#' \describe{
+#'   \item{\code{\link{key}}}{Functions to assign, retrieve or check an index key for a given object.}
+#'   \item{\code{\link{description}}}{Assign or retrieve a text description to an object.}
+#'   \item{\code{\link{units}}}{Assigns or retrieves measurement units assigned to a data object.}
+#'   \item{\code{\link{fmt}}}{Functions to assigns or retrieve data formatting information to and from an object.}
+#'   \item{\code{\link{keyword}}}{Functions to assign, retrieve or look up object keyword attributes.}
+#'   \item{\code{\link{project}}}{Functions to retrieve or assign project identifiers to objects.}   
+#'   \item{\code{\link{header}}}{Function to assign and retrieve file header information associated with a data object.} 
+#' }
 #'
 #' @export metadata
-#' @rawNamespace S3method(metadata, data.frame)
-#' @export metadata.data.frame
-#'
 metadata <- function(x, ...) UseMethod("metadata")
 
-#' @describeIn metadata Extract metadata for a data frame.
+#' @export 
 metadata.data.frame <- function(x, ...){
    # Initialize output:
    res <- data.frame(attributeName = names(x),
@@ -47,7 +53,7 @@ metadata.data.frame <- function(x, ...){
    # Extract attributes:
    res$attributeDefinition[match(names(attr(x, "description")), res$attributeName)] <- as.vector(attr(x, "description"))
    res$unit[match(names(attr(x, "units")), res$attributeName)] <- as.vector(attr(x, "units"))
-   res$formatString[match(names(attr(x, "format")), res$attributeName)] <- as.vector(attr(x, "format"))
+   res$formatString[match(names(attr(x, "format")), res$attributeName)] <- as.vector(attr(x, "fmt"))
 
    return(res)
 }

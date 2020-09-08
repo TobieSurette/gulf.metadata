@@ -1,6 +1,6 @@
 #' Data Description
 #'
-#' @description Assign or retrieve a text description to an object or to other attributes.
+#' @description Assign or retrieve a text description to an object.
 #'
 #' @param x Target object.
 #' @param y Character string(s) specifying the name(s) of the variables or attributes to be assigned a description string.
@@ -40,24 +40,18 @@
 #' description(x, "year") <- NULL  # Remove 'year' description.
 #' description(x) <- NULL          # Remove all descriptions.
 #'
-#' @export description
-#' @rawNamespace S3method(description, default)
-#' @export "description<-"
-#' @rawNamespace S3method("description<-", default)
-#'
-#' @seealso \code{\link{metadata}}, \code{\link{key}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}, \code{\link{keyword}}
-#'
+#' @seealso \code{\link{metadata}}
 
-#' @rdname description 
+#' @export
 description <- function(x, ...) UseMethod("description")
 
-#' @rdname description 
+#' @export
 description.default <- function(x, ...) return(attr(x, "description"))
 
-#' @rdname description 
+#' @export
 "description<-" <- function(x, ...) UseMethod("description<-")
 
-#' @rdname description 
+#' @export
 "description<-.default" <- function(x, y, value, ...){
    if (missing(y)){
       # Extract attributes fields from 'value':

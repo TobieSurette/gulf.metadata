@@ -2,18 +2,9 @@
 % Please edit documentation in R/keyword.R
 \name{keyword}
 \alias{keyword}
-\alias{keyword.default}
-\alias{keyword<-}
-\alias{keyword<-.default}
 \title{Keyword Functions}
 \usage{
 keyword(x, ...)
-
-\method{keyword}{default}(x, ...)
-
-keyword(x, ...) <- value
-
-\method{keyword}{default}(x) <- value
 }
 \arguments{
 \item{x}{Object.}
@@ -38,11 +29,11 @@ Functions to assign, retrieve or look up object keyword attributes.
 
 \examples{
 # Build sample data:
-x <- data.frame(year = 1990:2014, measurement = rpois(25))
+x <- data.frame(year = 1990:2014, measurement = rpois(25, 5))
 keyword(x) <- c("Annual", "survey") # Assign keywords
 keyword(x) # Retrieve key.
 
 }
 \seealso{
-\code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link{format}}
+\code{\link{metadata}}
 }

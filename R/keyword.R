@@ -17,28 +17,23 @@
 #' 
 #' @examples
 #' # Build sample data:
-#' x <- data.frame(year = 1990:2014, measurement = rpois(25))
+#' x <- data.frame(year = 1990:2014, measurement = rpois(25, 5))
 #' keyword(x) <- c("Annual", "survey") # Assign keywords
 #' keyword(x) # Retrieve key.
-#' 
-#' @export keyword
-#' @rawNamespace S3method(keyword, default)
-#' @export "keyword<-"
-#' @rawNamespace S3method("keyword<-", default)
 #'
-#' @seealso \code{\link{metadata}}, \code{\link{description}}, \code{\link{units}}, \code{\link[gulf.metadata]{format}}
+#' @seealso \code{\link{metadata}}
 #'
 
-#' @rdname keyword
+#' @export
 keyword <- function(x, ...) UseMethod("keyword")
 
-#' @rdname keyword
+#' @export
 keyword.default <- function(x, ...) return(attr(x, "keyword"))
 
-#' @rdname keyword
+#' @export
 "keyword<-" <- function(x, ...) UseMethod("keyword<-")
 
-#' @rdname keyword
+#' @export
 "keyword<-.default" <- function(x, value){
    if (is.null(value)) attr(x, "keyword") <- value
    if (!is.character(value)) stop("Keywords must be a character string(s).")
