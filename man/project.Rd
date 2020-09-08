@@ -27,7 +27,7 @@ The \code{project} attribute may be erased by assigning a \code{NULL} value to i
 \section{Functions}{
 
 \describe{
-  \item{\code{project}}{Generic \code{project}' extraction method.}
+  \item{\code{project}}{Generic \code{project} extraction method.}
   \item{\code{project.default}}{Default \code{project} extraction method.} 
   \item{\code{project.character}}{Find project name.} 
   \item{\code{project<-}}{Generic \code{project} assignment method.}
