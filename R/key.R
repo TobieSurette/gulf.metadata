@@ -19,25 +19,24 @@
 #' 
 #' @examples
 #' # Build sample data:
-#' x <- data.frame(year = 1990:2014, measurement = rpois(25))
+#' x <- data.frame(year = 1990:2014, measurement = rpois(25, lambda = 5))
 #' key(x) <- "year" # Assign key.
 #' key(x) # Retrieve key.
 #'
 #  # Check index keys:
 #' is.key(x, "measurement") # Generally FALSE
 #' is.key(x, "year")
-#' is.key(x)  # No need to specify 'year' since it is already defined.
 #' 
 #' @seealso \code{\link{metadata}}
 #'
 
-#' @export
+#' @export key
 key <- function(x, ...) UseMethod("key")
 
 #' @export 
 key.default <- function(x, ...) return(attr(x, "key"))
 
-#' @export
+#' @export "key<-"
 "key<-" <- function(x, ...) UseMethod("key<-")
 
 #' @export
@@ -53,7 +52,7 @@ key.default <- function(x, ...) return(attr(x, "key"))
    return(x)
 }
 
-#' @export 
+#' @export is.key
 is.key <- function(x, ...) UseMethod("is.key")
 
 #' @export
