@@ -31,13 +31,12 @@ Functions to assign, retrieve or check an index key for a given object.
 
 \examples{
 # Build sample data:
-x <- data.frame(year = 1990:2014, measurement = rpois(25))
+x <- data.frame(year = 1990:2014, measurement = rpois(25, lambda = 5))
 key(x) <- "year" # Assign key.
 key(x) # Retrieve key.
 
 is.key(x, "measurement") # Generally FALSE
 is.key(x, "year")
-is.key(x)  # No need to specify 'year' since it is already defined.
 
 }
 \seealso{
