@@ -50,7 +50,7 @@ project <- function(x, ...) UseMethod("project")
 
 #' @export
 project.default <- function(x, ...){
-   if (!missing(x)) return(attr(x, "project"))
+   if (!missing(x)) if (!is.null(attr(x, "project"))) return(attr(x, "project"))
    file <- locate(package = "gulf.metadata", "project.csv")
    v <- read.csv(file, header = TRUE, stringsAsFactors = FALSE)
    return(v)
