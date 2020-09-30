@@ -45,15 +45,18 @@
 #' @seealso \code{\link{metadata}}
 #'
 
-#' @export
+#' @export project
 project <- function(x, ...) UseMethod("project")
 
 #' @export
 project.default <- function(x, ...){
-   if (!missing(x)) if (!is.null(attr(x, "project"))) return(attr(x, "project"))
-   file <- locate(package = "gulf.metadata", "project.csv")
-   v <- read.csv(file, header = TRUE, stringsAsFactors = FALSE)
-   return(v)
+   if (missing(x)){
+      file <- locate(package = "gulf.metadata", "project.csv")
+      v <- read.csv(file, header = TRUE, stringsAsFactors = FALSE)
+      return(v)
+   }
+   
+   return(attr(x, "project"))
 }
 
 #' @export 
@@ -78,7 +81,7 @@ project.character <- function(x, verbose = FALSE, ...){
    return(NULL)
 }
 
-#' @export
+#' @export "project<-" 
 "project<-" <- function(x, ...) UseMethod("project<-")
 
 #' @export

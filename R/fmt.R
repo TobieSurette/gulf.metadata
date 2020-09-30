@@ -40,7 +40,7 @@
 #'   \item{\code{fmt<-.default}}{Default format assignment method. See Examples for usage.} 
 #' }
 #' 
-#' @export "fmt"
+#' @export fmt
 "fmt" <- function(x, ...) UseMethod("fmt")
 
 #' @export
