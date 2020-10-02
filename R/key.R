@@ -33,12 +33,14 @@
 #' @export key
 key <- function(x, ...) UseMethod("key")
 
+#' @export key.default
 #' @export 
 key.default <- function(x, ...) return(attr(x, "key"))
 
 #' @export "key<-"
 "key<-" <- function(x, ...) UseMethod("key<-")
 
+#' @export "key<-.default"
 #' @export
 "key<-.default" <- function(x, value){
    if (!is.null(value)){
