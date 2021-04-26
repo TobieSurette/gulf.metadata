@@ -28,8 +28,14 @@ header.default <- function(x) return(attr(x, "header"))
 
 #' @export
 "header<-.default" <- function(x, value){
-   if (is.null(value) | length(value) == 0) attr(x, "header") <- NULL
-   if (!is.null(value)) attr(x, "header") <- value
+   if (is.null(value) | length(value) == 0){
+      attr(x, "header") <- NULL
+      return(x)
+   }
+   if (!is.null(value)) {
+      attr(x, "header") <- value
+      return(x)
+   }
    if (!is.character(value)) stop("Keywords must be a character string(s).")
    if (length(value) == 1) if (value == "") attr(x, "header") <- NULL
 
