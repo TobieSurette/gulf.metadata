@@ -1,1 +1,15 @@
-name,name.long,keywords,descriptionscs,Snow crab survey,bottom trawl;benthic;snow crab;survey;sGSL,Southern Gulf of St. Lawrence snow crab surveysco,Snow crab Observer Program,sea sampling; at-sea; snow crab,Snow crab at-sea observer sampling programrvs,September multispecies survey,september;multispecies;bottom trawl;research vessel;groundfish;survey;sGSL,Southern Gulf of St. Lawrence multispecies surveyqrvs,Quebec August multispecies survey,quebec;august;multispecies;bottom trawl;research vessel;groundfish;survey;sGSL,Quebec Gulf of St. Lawrence multispecies surveynss,Northumberland Strait survey,northumberland;strait;bottom trawl;lobster;coastal;survey;sGSL,Northumberland Strait multispecies surveyscfec,snow crab fecundity,egg count;fertility;gonad;sperm;fecundity;snow crab;sGSL,Southern Gulf of St. Lawrence snow crab fecundity studiesalsi,Atlantic lobster settlement index program,larvae collectors;lobster;coastal;rock crab,Southern Gulf of St. Lawrence component of the Atlantic Lobster Settlement Index (ALSI) programsens,Sentinel Groundfish Survey,august;bottom trawl;groundfish;survey;sGSL,Southern Gulf of St. Lawrence groundfish industry-led sentinel surveyins,Inshore survey,inshore; survey,Inshore surveyjans,January survey,January;survey,January surveyjuvs,Juvenile survey,Juvenile;cod;survey,Juvenile cod surveyseas,Seasonal survey,seasonal;survey,Seasonal surveyscas,Scallop survey,scallop;survey;drag,Scallop drag survey
+name,name.long,oracle.dsn,oracle.uid,oracle.id,keywords,description
+scs,Snow crab survey,,,,bottom trawl;benthic;snow crab;survey;sGSL,Southern Gulf of St. Lawrence snow crab survey
+sco,Snow crab Observer Program,GAP,4R_GAP,,sea sampling; at-sea; snow crab,Snow crab at-sea observer sampling program
+rvs,September multispecies survey,ptran,GULF_4R,ECOSYSTEM,september;multispecies;bottom trawl;research vessel;groundfish;survey;sGSL,Southern Gulf of St. Lawrence multispecies survey
+qrvs,Quebec August multispecies survey,,,,quebec;august;multispecies;bottom trawl;research vessel;groundfish;survey;sGSL,Quebec Gulf of St. Lawrence multispecies survey
+nss,Northumberland Strait survey,ptran,GULF_4R,NORTHUMBERLAND,northumberland;strait;bottom trawl;lobster;coastal;survey;sGSL,Northumberland Strait multispecies survey
+scfec,snow crab fecundity,,,,egg count;fertility;gonad;sperm;fecundity;snow crab;sGSL,Southern Gulf of St. Lawrence snow crab fecundity studies
+alsi,Atlantic lobster settlement index program,,,,larvae collectors;lobster;coastal;rock crab,Southern Gulf of St. Lawrence component of the Atlantic Lobster Settlement Index (ALSI) program
+sens,Sentinel Groundfish Survey,ptran,GULF_4R,SENTINEL,august;bottom trawl;groundfish;survey;sGSL,Southern Gulf of St. Lawrence groundfish industry-led sentinel survey
+ins,Inshore survey,ptran,GULF_4R,INSHORE,inshore; survey,Inshore survey
+jans,January survey,ptran,GULF_4R,JANUARY,January;survey,January survey
+juvs,Juvenile survey,ptran,GULF_4R,JUVENILE,Juvenile;cod;survey,Juvenile cod survey
+seas,Seasonal survey,ptran,GULF_4R,SEASONAL,seasonal;survey,Seasonal survey
+scas,Scallop survey,ptran,GULF_4R,SCALLOP,scallop;survey;drag,Scallop drag survey
+vms,Vessel Monitoring System,VMS,GULF_SCIENCE,,gps;fishery;snow crab;coordinate,Fishery vessel monitoring system coordinate  data
