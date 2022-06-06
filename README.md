@@ -38,12 +38,19 @@ metadata(x)
 
 The package comes with a number of predefined data projects. Shown below is a portion of the project data table, the full version of which can be accessed using `project()`:
 
-   name       | name.long
+   name       | description
 ------------- | --------------------------------------------------------------------------
-`scs`         | Snow crab survey
-`sco`         | Snow crab Observer Program
-`rvs`         | September multispecies survey
-`nss`         | Northumberland Strait survey
-`scfec`       | snow crab fecundity
-`alsi`        | Atlantic Lobster Settlement Index program
-
+`scs`         | Southern Gulf of St. Lawrence snow crab survey
+`sco`         | Snow crab at-sea observer sampling program
+`rvs`         | Southern Gulf of St. Lawrence multispecies survey
+`qrvs`        | Quebec Gulf of St. Lawrence multispecies survey
+`nss`         | Northumberland Strait multispecies survey
+`scfec`       | Southern Gulf of St. Lawrence snow crab fecundity studies
+`alsi`        | Southern Gulf of St. Lawrence component of the Atlantic Lobster Settlement Index (ALSI) program
+`sens`        | Southern Gulf of St. Lawrence groundfish industry-led sentinel survey
+`ins`         | Inshore survey
+`jans`        | January survey
+`juvs`        | Juvenile cod survey
+`seas`        | Seasonal survey
+`scas`        | Scallop drag survey
+`vms`         | Fishery vessel monitoring system coordinate data
