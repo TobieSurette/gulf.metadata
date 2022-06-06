@@ -3,9 +3,9 @@
 #' @description Functions to retrieve or assign project identifiers to objects.
 #'
 #' @param x Target object.
-#' @param ... Other arguments (not used).
 #' @param value Character string(s) specifying the project identifier to be assigned.
 #' @param verbose Logical value specifying whether to return a character string result in long form.
+#' @param ... Other arguments (not used).
 #'
 #' @details The \code{project} attribute may be erased by assigning a \code{NULL} value to it.
 #'
@@ -86,10 +86,16 @@ project.character <- function(x, verbose = FALSE, ...){
 
 #' @export
 "project<-.default" <- function(x, value, ...){
-   v <- project()
+   # Erase project attribute:
+   if (is.null(value)){
+      attr(x, "project") <- NULL
+      return(x)
+   }
+   
    if (!is.character(value) | (length(value) != 1)) stop("Project must be a single character string.")
 
    # Look up project identifier in reference table:
+   v <- project()
    if (any(tolower(value) == v$name)){
       i <- which(tolower(value) == v$name)
       keyword(x) <- deblank(strsplit(v$keywords[i], ";")[[1]])
@@ -101,6 +107,3 @@ project.character <- function(x, verbose = FALSE, ...){
    
    return(x)
 }
-
-
-
