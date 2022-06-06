@@ -1,4 +1,4 @@
-#' Project Identifiers
+#' @title Project Identifiers
 #'
 #' @description Functions to retrieve or assign project identifiers to objects.
 #'
