@@ -1,4 +1,17 @@
 # `gulf.metadata` **R** Package
+
+## Installation:
+
+Packages from the `gulf` series of packages can be installed directly from GitHub by running the following code from R:
+
+```
+library(devtools)
+install_github("TobieSurette/gulf.utils")
+gulf.utils::install.gulf()
+```
+
+## Description:
+
 `gulf.metadata` is an **R** package for treating Southern Gulf of St. Lawrence metadata. Metadata is data which provides information about other data, such data provenance, measurement units, index keys, study and field descriptions, data and file formats and keywords. Metadata can be attached to or retrieved from objects using the set of functions in the table below. Note that some metadata are automatically linked with datasets when they are loaded.
 
 Function      | Description
